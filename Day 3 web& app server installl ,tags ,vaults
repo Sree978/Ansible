@@ -100,7 +100,8 @@ to see data again
 ansible-vault view sree.yml
  to decrypt data
 ansible-vault encrypt sree.yml
-
+to change password
+ansible-vault encrypt sree.yml
 
  
 
