@@ -23,4 +23,26 @@ ansible-playbook condition.yml
 
 Q2 )  we have ample(ex 10 ) amount of task  we have excute 9 task and one skip how can you do 
 
+vim sree.yml
+---
+- hosts: test
+  connection: ssh
+
+  tasks:
+    - name: install scm install
+      yum: name=git state=present
+
+    - name: install java
+      yum: name=java-17-amazon-corretto state=present
+
+    - name: install maven
+      yum: name=maven state=present
+      tags: buildtool
+    - name: install httpd
+      yum: name=httpd state=present
+...
+
+ansible-playbook sree.yml --skip-tags=buildtool
+
+
 
