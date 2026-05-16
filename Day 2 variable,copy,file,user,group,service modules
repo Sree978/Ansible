@@ -66,3 +66,44 @@ ansible-playbook playbookfile.yml
 will notice folder in slave servers
 
 
+---------> create a user  & multple users <----------
+
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create a user
+      user: name=mustafa state=present   syntax 1
+
+    - name: create another user
+      user:
+        name: flm
+        state: present       synatx 2
+... 
+
+& 
+
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create a user
+      user: name={{item}} state=present
+
+      with_items:
+        - jenkins
+        - docker
+        - kubernetes
+        - terraform
+        - azure
+...
+
+vim playbookfile.yml
+
+will notice users n slave servers
