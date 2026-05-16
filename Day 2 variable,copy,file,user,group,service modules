@@ -133,4 +133,20 @@ will notice users n slave servers
 
 will notice created users in slave servers
 
+---------->  create a file inside folder  <-----------------
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create file infolder
+      file:
+        name: "/root/ Devops/file1"
+        state: touch
+
+
+...
+
+
 
