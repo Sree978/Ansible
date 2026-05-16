@@ -72,6 +72,11 @@ ansible-playbook myplaybok.yml
 
 will noticed git installed in dev server
 
+Inventories 
+  1) static     --> present 
+  2) Dynamic    --> short & sweet
+
+
 
 
         
