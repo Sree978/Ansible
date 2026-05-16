@@ -94,7 +94,7 @@ will notice folder in slave servers
   tasks:
 
     - name: create a user
-      user: name={{item}} state=present
+      user: name={{item}} state=present            if state=absent  to remove all users 
 
       with_items:
         - jenkins
