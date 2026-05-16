@@ -131,5 +131,6 @@ will notice users n slave servers
 ...
  ansible-playbook playbookfile.yml
 
-will notice created users
+will notice created users in slave servers
+
 
