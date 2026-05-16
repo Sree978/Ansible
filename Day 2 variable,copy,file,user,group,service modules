@@ -61,5 +61,8 @@ will notice two files in dev server
         state: directory
 ...
 
+ansible-playbook playbookfile.yml
+
+will notice folder in slave servers
 
 
