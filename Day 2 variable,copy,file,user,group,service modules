@@ -107,3 +107,29 @@ will notice folder in slave servers
 vim playbookfile.yml
 
 will notice users n slave servers
+
+--------> create groups <-------------------
+
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create multiple groups
+      group:
+        name: "{{ item}}"
+        state: present
+
+      with_items:
+        - adidas
+        - tcs
+        - zoho
+        - hrx
+        - puma
+...
+ ansible-playbook playbookfile.yml
+
+will notice created users
+
