@@ -1,3 +1,58 @@
 DO avoid disconnect server from Mobaxterm
 export TMOUT=0
 echo $TMOUT
+-----> install webserver & start & add data in default path   <-----
+ 1  hostnamectl hostname "mas"
+  3  yum install ansible -y
+    4  passwd root
+    5  clear
+    6  vi /etc/ssh/sshd_config
+    7  ssh-keygen
+    8  clear
+    9  ls .ssh
+   12  ssh-copy-id root@172.31.24.247
+   13  clear
+   16  ssh-copy-id root@172.31.24.81
+   17  clear
+   18  cd /etc/ansible/
+   19  cd ..
+   20  exit
+   22  vi /etc/ansible/hosts
+   23  ansible all -m ping
+   24  clear
+   25  vi webserver.yml
+
+//////
+
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+    - name: install webserverl
+      yum: name=httpd state=present
+
+    - name: start webserver
+      service: name=httpd state=started
+
+    - name: create a index file
+      file:
+        path: "/var/www/html/index.html"
+        state: touch
+
+    - name: add content in indexfile
+      copy:
+        dest: "/var/www/html/index.html"
+        content: |
+          <h1> welcome to ansible class <h1>
+          <h2> webserver app <h2>
+...
+
+     /////////
+
+   28  anisble-playbook webserver.yml
+
+you can you browse over 
+   
+
+
