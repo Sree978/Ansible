@@ -24,4 +24,27 @@ NOTE : yum: name={{xyz}} state=present
 or
  action: yum: name={{xyz}} state=present
  command: yum: name={{xyz}} state=present
- 
+
+-------> to create file  <-------
+
+---
+- hosts: ops
+  connection: ssh
+
+  tasks:
+
+    - name: create a file
+      file: path="/root/flm.txt" state=touch
+
+    - name: create another file
+      file:
+        path: "/root/Jenkinsfile"
+        state: touch
+...
+
+ansible-playbook playbookfile.yml
+
+will notice two files in dev server 
+
+
+
