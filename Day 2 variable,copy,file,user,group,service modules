@@ -1,1 +1,21 @@
+same config as we did for previous here also have to do
+go to master & write playbook
+  ex
+---
+- hosts: dev
+  connection: ssh
 
+  vars:                         \\\ variables
+    abc: "git"
+    xyz: "maven"
+
+  tasks:
+
+    - name: installing an scm tool on dev env
+      yum: name={{abc}} state=present              \\ {{  }}  to mention variable
+
+    - name: installing a build tool
+      yum: name={{xyz}} state=present
+...
+
+ansible-playbook playbook.yaml
