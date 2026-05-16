@@ -1,0 +1,6 @@
+we have two slave servers how can we install webserver in two server
+one is amazon linux
+one is ubuntu  write a playbook for it
+
+based on OS  amazon linux - httpd
+             ubuntu   - apache2
