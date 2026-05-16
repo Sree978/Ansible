@@ -4,3 +4,20 @@ one is ubuntu  write a playbook for it
 
 based on OS  amazon linux - httpd
              ubuntu   - apache2
+vim condition.yml
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+    - name: install webserver on RedHat
+      yum: name=httpd state=present
+      when: ansible_os_family=="RedHat"
+
+    - name: install webserver on Ubuntu
+      apt: name=apache2 state=present
+      when: ansible_os_family=="Ubuntu"
+...
+
+ansible-playbook condition.yml
+
