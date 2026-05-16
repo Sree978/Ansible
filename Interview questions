@@ -1,4 +1,4 @@
-we have two slave servers how can we install webserver in two server
+q1 )we have two slave servers how can we install webserver in two server
 one is amazon linux
 one is ubuntu  write a playbook for it
 
@@ -20,4 +20,7 @@ vim condition.yml
 ...
 
 ansible-playbook condition.yml
+
+Q2 )  we have ample(ex 10 ) amount of task  we have excute 9 task and one skip how can you do 
+
 
