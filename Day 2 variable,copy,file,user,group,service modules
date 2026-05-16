@@ -168,5 +168,33 @@ will notice created users in slave servers
 ...
 
 
+-----------------> install webserver and start <------------------
 
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+
+    - name: install webserver
+      yum: name=httpd state=present
+
+    - name: start webserver
+      service: name=httpd state=started
+...
+
+
+------------------> copy file <-----------------
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: copy a file
+      copy:
+        src: "/etc/ansible/playbookfile.yml"
+        dest: "/opt/"
+...
 
