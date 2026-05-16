@@ -45,7 +45,35 @@ in this path we have to add inventary
 write play book
         1. target [dev, test, prod]
         2. tasks [install/ uninstall/ update]
-        3. variables
+        3. variable
+ install = present
+uninstall = absent
+update = latest
+start = started
+stop = stopped
+restart = restarted
+
+vim myplaybok.yml      ---> filename anything fine extenstion should be .yml/.yaml  (yet another markup langage)
+ ---
+#target section
+- hosts: dev    or test (particular server)  or all  ( install in all server )
+  connection: ssh
+
+#task section
+  tasks:
+  - name: i am installing git on dev env
+      yum: name=git state=present
+...
+
+Its should start wit h  --- & end with ...
+
+excute play book
+ansible-playbook myplaybok.yml
+
+will noticed git installed in dev server
+
+
+
         
 
 
