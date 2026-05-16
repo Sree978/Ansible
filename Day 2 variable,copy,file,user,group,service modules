@@ -19,3 +19,9 @@ go to master & write playbook
 ...
 
 ansible-playbook playbook.yaml
+
+NOTE : yum: name={{xyz}} state=present
+or
+ action: yum: name={{xyz}} state=present
+ command: yum: name={{xyz}} state=present
+ 
