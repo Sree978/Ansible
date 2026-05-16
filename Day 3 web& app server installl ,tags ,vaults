@@ -95,6 +95,11 @@ vault
  to encrypt data 
 ansible-vault encrypt sree.yml
 
+to see data again
+
+ansible-vault view sree.yml
+
+
  
 
 
