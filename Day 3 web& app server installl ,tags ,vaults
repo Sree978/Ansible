@@ -103,6 +103,9 @@ ansible-vault encrypt sree.yml
 to change password
 ansible-vault encrypt sree.yml
 
+ansible-vault ecreate filename
+
+
  
 
 
