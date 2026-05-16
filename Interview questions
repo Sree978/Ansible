@@ -44,5 +44,8 @@ vim sree.yml
 
 ansible-playbook sree.yml --skip-tags=buildtool
 
+will notice except maven rest of installed
+
+
 
 
