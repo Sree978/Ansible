@@ -47,5 +47,13 @@ ansible-playbook sree.yml --skip-tags=buildtool
 will notice except maven rest of installed
 
 
+Q3 
+
+one  task should be execute remaining all skip
+
+same above playbook
+
+excute commnad
+ansible-playbook sree.yml --tags=buildtool
 
 
