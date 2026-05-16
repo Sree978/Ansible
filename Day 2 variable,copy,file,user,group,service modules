@@ -149,4 +149,24 @@ will notice created users in slave servers
 ...
 
 
+----------------------> to change owner , group and permissions   <--------------------
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create file infolder
+      file:
+        name: "/root/ Devops/file1"
+        state: touch
+        owner: mustafa
+        group: hrx
+        mode: 7777
+
+...
+
+
+
 
