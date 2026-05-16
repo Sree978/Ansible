@@ -47,4 +47,19 @@ ansible-playbook playbookfile.yml
 will notice two files in dev server 
 
 
+--------------> to create folder   <------------
+
+---
+- hosts: all
+  connection: ssh
+
+  tasks:
+
+    - name: create folder
+      file:
+        path: "/root/DevOps"
+        state: directory
+...
+
+
 
