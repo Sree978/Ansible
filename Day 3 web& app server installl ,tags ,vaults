@@ -91,6 +91,10 @@ vim appserver.yml
 
 ansible-playbook appserver.yml
 
+vault
+ to encrypt data 
+ansible-vault encrypt sree.yml
+
  
 
 
