@@ -1,0 +1,3 @@
+DO avoid disconnect server from Mobaxterm
+export TMOUT=0
+echo $TMOUT
