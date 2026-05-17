@@ -47,8 +47,20 @@ go to flm flder and run the main.yml
 you will see all the task completed o/p you can see over browser
 
 --------------> Ansible debug module <----------------
+ to check applications installed or not in server over playbook
 
 
+ vim debug.yml
+
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+    - debug:
+        msg:  "we are learnig pipiline"
+
+ansible-playbook debug.yml
 
 
 
