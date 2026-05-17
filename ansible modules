@@ -1,0 +1,11 @@
+install/uninstall/update
+files create & users
+users create
+webserver up
+webserver down
+restart
+cpu info
+mem info
+copy
+
+single line command  its ansible modules  we wont use much
