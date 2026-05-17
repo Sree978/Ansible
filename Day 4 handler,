@@ -25,3 +25,22 @@ ansible-playbook playbook.yml
 
 once installtion only handler will start
 
+------->  Roles   <-------------
+
+[root@master ~]# tree
+.
+├── flm
+│   ├── adidas
+│   │   └── task3
+│   │       └── task3.yml
+│   ├── hrx
+│   │   └── task
+│   │       └── task1.yml
+│   └── puma
+│       └── task2
+│           └── task2.yml
+playbook.yml
+
+
+
+
