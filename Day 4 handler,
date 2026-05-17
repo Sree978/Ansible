@@ -36,10 +36,14 @@ once installtion only handler will start
 │   ├── hrx
 │   │   └── task
 │   │       └── task1.yml
+│   ├── maim.yml
 │   └── puma
 │       └── task2
 │           └── task2.yml
-playbook.yml
+└── playbook.yml
+
+
+
 
 
 
