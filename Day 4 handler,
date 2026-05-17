@@ -1,0 +1,27 @@
+Handler
+
+Vim playbook.yml
+
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+    - name: install webserver
+      yum:
+        name: httpd
+        state: present
+      notify:
+        - start webserver
+
+  handlers:
+    - name: start webserver
+      service:
+        name: httpd
+        state: started
+...
+
+ansible-playbook playbook.yml
+
+once installtion only handler will start
+
