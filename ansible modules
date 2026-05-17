@@ -9,3 +9,5 @@ mem info
 copy
 
 single line command  its ansible modules  we wont use much
+will use for quick actions
+ansible group-name -m <module> -a "args"
