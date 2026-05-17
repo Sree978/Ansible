@@ -63,6 +63,18 @@ you will see all the task completed o/p you can see over browser
 ansible-playbook debug.yml
 
 
+---
+- hosts: dev
+  connection: ssh
+
+  tasks:
+    - name: check the git version
+      command: git -v
+      register: abc
+
+    - debug:
+        msg: "The SCM tool is {{ abc.stdout }}"
+
 
 
 
